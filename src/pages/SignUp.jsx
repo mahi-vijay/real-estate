@@ -50,10 +50,10 @@ export default function SignUp() {
       formDataCopy.timestamp = serverTimestamp();
 
       await setDoc(doc(db, "users", user.uid), formDataCopy);
-      toast.success("Sign up was successful");
+      toast.success("Successfully signed up");
       navigate("/");
     } catch (error) {
-      toast.error("Something went wrong with the registration");
+      toast.error("The fields cannot be empty");
     }
   }
   return (
