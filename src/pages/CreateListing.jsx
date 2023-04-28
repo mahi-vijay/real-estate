@@ -21,8 +21,8 @@ export default function CreateListing() {
     const [formData, setFormData] = useState({
     type: "rent",
     name: "",
-    bedrooms: 1,
-    bathrooms: 1,
+    rooms: 1,
+    acres: 1,
     parking: false,
     furnished: false,
     address: "",
@@ -37,8 +37,8 @@ export default function CreateListing() {
   const {
     type,
     name,
-    bedrooms,
-    bathrooms,
+    rooms,
+    acres,
     parking,
     address,
     furnished,
@@ -160,6 +160,7 @@ export default function CreateListing() {
       imgUrls,
       //geolocation,
       timestamp: serverTimestamp(),
+      userRef: auth.currentUser.uid,
     };
     delete formDataCopy.images;
     // !formDataCopy.offer && delete formDataCopy.discountedPrice;
@@ -225,8 +226,8 @@ export default function CreateListing() {
             <p className="text-lg font-semibold">No. of Rooms</p>
             <input
               type="number"
-              id="bedrooms"
-              value={bedrooms}
+              id="rooms"
+              value={rooms}
               onChange={onChange}
               min="1"
               max="50"
@@ -238,8 +239,8 @@ export default function CreateListing() {
             <p className="text-lg font-semibold">Total Area(in acres)</p>
             <input
               type="number"
-              id="bathrooms"
-              value={bathrooms}
+              id="acres"
+              value={acres}
               onChange={onChange}
               min="1"
               max="50"
