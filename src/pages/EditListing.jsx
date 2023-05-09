@@ -117,7 +117,6 @@ export default function CreateListing() {
       return;
     }
 
-
     async function storeImage(image) {
       return new Promise((resolve, reject) => {
         const storage = getStorage();

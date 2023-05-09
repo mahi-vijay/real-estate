@@ -5,7 +5,6 @@ import SignIn from "./pages/SignIn";
 import SignUp from "./pages/SignUp";
 import PrivateRoute from "./components/PrivateRoute";
 import ForgotPassword from "./pages/ForgotPassword";
-
 import Header from "./components/Header";
 import CreateListing from "./pages/CreateListing";
 import { ToastContainer } from "react-toastify";
